@@ -26,7 +26,6 @@ const child_process = require('child_process'),
 				+ SONAR_VERSION);
 		}
 		if (!SONAR_VERSION){
-			console.log("Couldn't read '.sonar-version' file. Set version to latest.");
 			SONAR_VERSION = data[0].name;
 		}
 		var gotcha = data.some(element => {
