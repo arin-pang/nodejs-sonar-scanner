@@ -11,6 +11,8 @@ You can install node-sonar-scanner as a development dependency and add it as a s
 npm i sonar-scanner --save-dev
 ```     
 
+# Use latest Version
+
 ```json
 {
   "scripts": {
@@ -22,3 +24,22 @@ npm i sonar-scanner --save-dev
 ```shell
 npm run sonar-scanner
 ```     
+
+# Use specific Version
+
+```json
+{
+  "scripts": {
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner -t 4.2.0.1873"
+  }
+}
+```
+
+
+```shell
+npm run sonar-scanner
+```     
+
+
+# Forked from
+https://github.com/bcaudan/node-sonar-scanner

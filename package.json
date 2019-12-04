@@ -1,6 +1,6 @@
 {
-  "name": "sonar-scanner",
-  "version": "3.1.0",
+  "name": "node-sonar-scanner",
+  "version": "1.0.0",
   "description": "Wrap sonar-scanner as a node module",
   "keywords": [
     "sonar",
@@ -11,17 +11,23 @@
     "sonar-scanner": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node postinstall.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bcaudan/node-sonar-scanner"
+    "url": "https://github.com/arin-pang/node-sonar-scanner"
   },
   "bugs": {
-    "url": "https://github.com/bcaudan/node-sonar-scanner/issues"
+    "url": "https://github.com/arin-pang/node-sonar-scanner/issues"
   },
-  "homepage": "https://github.com/bcaudan/node-sonar-scanner",
-  "author": "Bastien Caudan",
-  "license": "MIT"
+  "homepage": "https://github.com/arin-pang/node-sonar-scanner",
+  "author": "arin-pang",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "node-fetch": "^2.6.0",
+    "unzipper": "^0.10.5",
+    "yargs": "^15.0.2",
+    "yargs-unparser": "^1.5.0"
+  }
 }
