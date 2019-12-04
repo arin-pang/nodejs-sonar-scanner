@@ -8,7 +8,7 @@ Wrap [SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+
 You can install nodejs-sonar-scanner as a development dependency and add it as a script property in your package.json.
 
 ```shell
-npm i sonar-scanner --save-dev
+npm i nodejs-sonar-scanner --save-dev
 ```     
 
 # Use latest Version
@@ -16,7 +16,7 @@ npm i sonar-scanner --save-dev
 ```json
 {
   "scripts": {
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
+    "sonar-scanner": "node_modules/nodejs-sonar-scanner/bin/sonar-scanner"
   }
 }
 ```
@@ -30,7 +30,7 @@ npm run sonar-scanner
 ```json
 {
   "scripts": {
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner -t 4.2.0.1873"
+    "sonar-scanner": "node_modules/nodejs-sonar-scanner/bin/sonar-scanner -t 4.2.0.1873"
   }
 }
 ```
