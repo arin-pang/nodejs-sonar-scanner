@@ -1,5 +1,5 @@
 {
-  "name": "node-sonar-scanner",
+  "name": "nodejs-sonar-scanner",
   "version": "1.0.0",
   "description": "Wrap sonar-scanner as a node module",
   "keywords": [
