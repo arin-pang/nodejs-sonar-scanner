@@ -1,6 +1,6 @@
 {
   "name": "nodejs-sonar-scanner",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Wrap sonar-scanner as a node module",
   "keywords": [
     "sonar",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arin-pang/node-sonar-scanner"
+    "url": "https://github.com/arin-pang/nodejs-sonar-scanner"
   },
   "bugs": {
-    "url": "https://github.com/arin-pang/node-sonar-scanner/issues"
+    "url": "https://github.com/arin-pang/nodejs-sonar-scanner/issues"
   },
-  "homepage": "https://github.com/arin-pang/node-sonar-scanner",
+  "homepage": "https://github.com/arin-pang/nodejs-sonar-scanner",
   "author": "arin-pang",
   "license": "MIT",
   "dependencies": {
