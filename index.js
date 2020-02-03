@@ -8,8 +8,16 @@ const child_process = require('child_process'),
 	unzipper = require('unzipper'),
 	fs = require('fs-extra'),
 	argv = require('yargs').argv,
-	unparse = require('yargs-unparser');
-	
+	unparse = require('yargs-unparser'),
+	HttpsProxyAgent = require('https-proxy-agent');
+
+	var fetchOptions = {};
+	var httpProxy = (process.env.http_proxy || process.env.https_proxy || process.env.HTTP_PROXY
+		|| process.env.HTTPS_PROXY || '').trim();
+	if (httpProxy) {
+		fetchOptions = { agent: new HttpsProxyAgent(httpProxy)}
+	}
+
 	var SONAR_VERSION = argv.t || argv.target || null;
 
 
@@ -18,7 +26,7 @@ const child_process = require('child_process'),
 
 	async function getTags(page){
 		var res = await fetch("https://api.github.com/repos/SonarSource/sonar-scanner-cli/tags"
-		+"?page="+page)    
+		+"?page="+page, fetchOptions)
 		var data = await res.json();
 			
 		if (data.length == 0){
@@ -59,7 +67,7 @@ const child_process = require('child_process'),
 		try{
 			var res = await fetch("https://binaries.sonarsource.com/Distribution/"
 								+ "sonar-scanner-cli/sonar-scanner-cli-"
-								+ SONAR_VERSION + ".zip");
+								+ SONAR_VERSION + ".zip", fetchOptions);
 			return await res.buffer();
 		}catch(err){
 			console.error(err);
