@@ -162,10 +162,8 @@ const child_process = require('child_process'),
 		});
 	}
 
-	
-try{
-	getTags(1);
-} catch(err){
+
+getTags(1).catch((err) => {
 	console.error(err);
 	process.exit(1);
-}
+});
