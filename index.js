@@ -25,10 +25,14 @@ const child_process = require('child_process'),
 	delete argv.target;
 
 	async function getTags(page){
-		var res = await fetch("https://api.github.com/repos/SonarSource/sonar-scanner-cli/tags"
-		+"?page="+page, fetchOptions)
-		var data = await res.json();
-			
+		try{
+			var res = await fetch("https://api.github.com/repos/SonarSource/sonar-scanner-cli/tags"
+			+"?page="+page, fetchOptions)
+			var data = await res.json();
+		} catch (err) {
+			console.error(err);
+			throw new Error("Couldn't get tags from Github API.");
+		}
 		if (data.length == 0){
 			throw new Error("Couldn't find target sonar-scanner-cli version: "
 				+ SONAR_VERSION);
